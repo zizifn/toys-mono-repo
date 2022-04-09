@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "auth-api-poc": "apps/auth-api-poc"
+  }
+}

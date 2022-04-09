@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="traceparent" content="{{traceparent}}">
+    <title>Document</title>
+  <script src="/javascripts/document-load-build.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <button id="btn1"> click me</button>
+    <button id="btn2"> fetech</button>
+
+        <button id="b1">Bind Error</button>
+    <button id="b2">Cause Error</button>
+<p>Welcome to {{title}}</p>
+
+<pre>{{text}}</pre>
+<script src="/javascripts/opentel.js"></script>
+<script type="module" src="/javascripts/test.js"></script>
+<script>
+
+btn2.addEventListener('click', async ()=>{
+  {{!-- const resp2 = await fetch("http://localhost:4000/corss-origin-header/json"); --}}
+  const resp2 = await fetch("http://zizi.press");
+
+
+  console.log(await resp2.text())
+});
+
+  document.getElementById("btn1").addEventListener('click', ()=>{
+    let result =0;
+    for(let i =1; i<1000000000;i++){
+      result+=i;
+    }
+    console.log(result)
+    throw new Error('error')
+  })
+  function click1(){
+    console.log('dddddddddddddddddddddd')
+  }
+</script>
+</body>
+</html>
