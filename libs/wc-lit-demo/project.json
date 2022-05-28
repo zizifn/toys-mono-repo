@@ -1,0 +1,42 @@
+{
+  "root": "libs/wc-lit-demo",
+  "sourceRoot": "libs/wc-lit-demo/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/wc-lit-demo",
+        "main": "libs/wc-lit-demo/src/index.ts",
+        "tsConfig": "libs/wc-lit-demo/tsconfig.lib.json",
+        "assets": [
+          "libs/wc-lit-demo/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/wc-lit-demo/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/wc-lit-demo"
+      ],
+      "options": {
+        "jestConfig": "libs/wc-lit-demo/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/angular-app1/home",
+  "sourceRoot": "libs/angular-app1/home/src",
+  "prefix": "zizifn",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/angular-app1/home"],
+      "options": {
+        "project": "libs/angular-app1/home/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/angular-app1/home/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/angular-app1/home/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/angular-app1/home"],
+      "options": {
+        "jestConfig": "libs/angular-app1/home/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular-app1/home/src/**/*.ts",
+          "libs/angular-app1/home/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
