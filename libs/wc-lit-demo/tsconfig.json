@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "../../dist/out-tsc",
+    "module": "CommonJS",
+    "types": ["jest", "node"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowJs": true
+  },
+  "include": ["**/*.test.ts", "**/*.spec.ts", "**/*.d.ts", "test.spec.ts"]
+}
