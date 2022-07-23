@@ -28,7 +28,7 @@ const sdk = new NodeSDK({
         [SemanticResourceAttributes.SERVICE_NAME]: 'my-node-service',
     }),
     // traceExporter: new OTLPTraceExporter(collectorOptions),
-    traceExporter: new ConsoleSpanExporter(),
+    // traceExporter: new ConsoleSpanExporter(),
 
     // metricExporter: new OTLPMetricExporter(collectorMetricOptions),
     instrumentations: [getNodeAutoInstrumentations(

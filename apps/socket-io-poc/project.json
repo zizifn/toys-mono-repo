@@ -1,20 +1,16 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/auth-api-poc/src",
+  "sourceRoot": "apps/socket-io-poc/src",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/auth-api-poc",
-        "main": "apps/auth-api-poc/src/main.ts",
-        "tsConfig": "apps/auth-api-poc/tsconfig.app.json",
-        "assets": [
-          "apps/auth-api-poc/src/assets",
-          "apps/auth-api-poc/src/public",
-          "apps/auth-api-poc/src/views"
-        ]
+        "outputPath": "dist/apps/socket-io-poc",
+        "main": "apps/socket-io-poc/src/main.ts",
+        "tsConfig": "apps/socket-io-poc/tsconfig.app.json",
+        "assets": ["apps/socket-io-poc/src/assets"]
       },
       "configurations": {
         "production": {
@@ -23,8 +19,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/auth-api-poc/src/environments/environment.ts",
-              "with": "apps/auth-api-poc/src/environments/environment.prod.ts"
+              "replace": "apps/socket-io-poc/src/environments/environment.ts",
+              "with": "apps/socket-io-poc/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -33,21 +29,21 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "auth-api-poc:build"
+        "buildTarget": "socket-io-poc:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/auth-api-poc/**/*.ts"]
+        "lintFilePatterns": ["apps/socket-io-poc/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/auth-api-poc"],
+      "outputs": ["coverage/apps/socket-io-poc"],
       "options": {
-        "jestConfig": "apps/auth-api-poc/jest.config.ts",
+        "jestConfig": "apps/socket-io-poc/jest.config.ts",
         "passWithNoTests": true
       }
     }

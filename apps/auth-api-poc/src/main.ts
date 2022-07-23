@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
- import './utils/tracing'
+//  import './utils/tracing'
 
  import { MONGO_DB_URL, NODE_ENV, PORT } from './environments/environment';
 
@@ -39,23 +39,23 @@
  if (NODE_ENV !== 'production') {
    set('debug', true);
  }
-//  server.listen(port);
-//  server.on('error', onError);
-//  server.on('listening', onListening);
- connect(MONGO_DB_URL, {
-   socketTimeoutMS: 10000,
-   serverSelectionTimeoutMS: 10000,
-   family: 4
+ server.listen(port);
+ server.on('error', onError);
+ server.on('listening', onListening);
+//  connect(MONGO_DB_URL, {
+//    socketTimeoutMS: 10000,
+//    serverSelectionTimeoutMS: 10000,
+//    family: 4
 
- }).then(
-   () => {
-     server.listen(port);
-     server.on('error', onError);
-     server.on('listening', onListening);
-   }
- ).catch(err => {
-   console.log(err);
- });
+//  }).then(
+//    () => {
+//      server.listen(port);
+//      server.on('error', onError);
+//      server.on('listening', onListening);
+//    }
+//  ).catch(err => {
+//    console.log(err);
+//  });
 
 
  /**

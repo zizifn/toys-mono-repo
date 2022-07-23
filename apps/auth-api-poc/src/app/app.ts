@@ -16,6 +16,7 @@ import notesRouter from '../routes/notes';
 import opentraceRouter from '../routes/opentrace';
 import session from 'express-session';
 import sessionRouter from '../routes/session';
+import graphqlRouter from '../routes/graphql';
 
 const app = express();
 
@@ -27,7 +28,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(join(__dirname,'public')));
+app.use("/static", express.static(join(__dirname,'public')));
 const corsOptions = {
   //zizifn.github.io
   origin: ["http://localhost:4300", /herokuapp.com$/, /zizi.press$/, /zizifn.github.io$/],
@@ -54,6 +55,8 @@ app.use('/corss-origin-header', addCrossOriginHeader, cors(corsOptions), disable
 app.use('/session', session(sess), cors(corsOptions), disableCache, sessionRouter);
 app.use('/opentrace', opentraceRouter);
 app.use('/api/auth0', cors(corsOptions), auth0JWTCheck, disableCache, notesRouter);
+
+app.use('/graphql', cors(corsOptions), graphqlRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
