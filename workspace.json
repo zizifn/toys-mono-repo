@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "auth-api-poc": "apps/auth-api-poc"
-  }
+    "auth-api-poc": "apps/auth-api-poc",
+    "socket-io-poc": "apps/socket-io-poc",
+    "angular-app1": "apps/angular-app1"
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

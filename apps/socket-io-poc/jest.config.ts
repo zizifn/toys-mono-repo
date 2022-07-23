@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'auth-api-poc',
+/* eslint-disable */
+export default {
+  displayName: 'socket-io-poc',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/auth-api-poc',
+  coverageDirectory: '../../coverage/apps/socket-io-poc',
 };
