@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/angular-app1",
   "sourceRoot": "apps/angular-app1/src",
   "prefix": "zizifn",
   "targets": {

@@ -1,9 +1,15 @@
 {
   "version": 2,
   "projects": {
+    "angular-app1": "apps/angular-app1",
+    "app1-home": "libs/angular-app1/home",
+    "app1-profile": "libs/angular-app1/profile",
+    "app2": "apps/app2",
     "auth-api-poc": "apps/auth-api-poc",
+    "react-trpc": "apps/react-trpc",
+    "react-trpc-e2e": "apps/react-trpc-e2e",
     "socket-io-poc": "apps/socket-io-poc",
-    "angular-app1": "apps/angular-app1"
+    "trpc-express": "apps/trpc-express"
   },
   "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

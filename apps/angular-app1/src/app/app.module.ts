@@ -1,5 +1,5 @@
 import { } from '@zizifn/app1-profile'
-import '@zizifn/ui-lit-demo'
+// import '@zizifn/ui-lit-demo'
 
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
@@ -8,11 +8,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { ChildComponent } from './child/child/child.component';
+import {OverlayModule } from '@angular/cdk/overlay'
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, ChildComponent],
   imports: [
     BrowserModule,
+    OverlayModule,
     RouterModule.forRoot([
       {
         path: 'profile',

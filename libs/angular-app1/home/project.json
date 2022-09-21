@@ -1,6 +1,5 @@
 {
   "projectType": "library",
-  "root": "libs/angular-app1/home",
   "sourceRoot": "libs/angular-app1/home/src",
   "prefix": "zizifn",
   "targets": {

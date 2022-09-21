@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@zizifn/app1-home": ["libs/angular-app1/home/src/index.ts"],
+      "@zizifn/app1-profile": ["libs/angular-app1/profile/src/index.ts"],
+      "@zizifn/trpc-express": ["apps/trpc-express/src/app/trpcRouter.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

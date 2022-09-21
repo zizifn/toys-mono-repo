@@ -1,6 +1,5 @@
 {
   "projectType": "library",
-  "root": "libs/angular-app1/profile",
   "sourceRoot": "libs/angular-app1/profile/src",
   "prefix": "zizifn",
   "targets": {
