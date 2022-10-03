@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   displayName: 'angular-app1-home',
   preset: '../../../jest.preset.js',

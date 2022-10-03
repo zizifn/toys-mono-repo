@@ -4,7 +4,7 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:webpack",
+      "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/auth-api-poc",
@@ -14,7 +14,9 @@
           "apps/auth-api-poc/src/assets",
           "apps/auth-api-poc/src/public",
           "apps/auth-api-poc/src/views"
-        ]
+        ],
+        "target": "node",
+        "compiler": "tsc"
       },
       "configurations": {
         "production": {

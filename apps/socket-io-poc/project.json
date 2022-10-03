@@ -4,13 +4,15 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:webpack",
+      "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/socket-io-poc",
         "main": "apps/socket-io-poc/src/main.ts",
         "tsConfig": "apps/socket-io-poc/tsconfig.app.json",
-        "assets": ["apps/socket-io-poc/src/assets"]
+        "assets": ["apps/socket-io-poc/src/assets"],
+        "target": "node",
+        "compiler": "tsc"
       },
       "configurations": {
         "production": {

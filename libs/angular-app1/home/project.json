@@ -23,7 +23,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/angular-app1/home"],
       "options": {
-        "jestConfig": "libs/angular-app1/home/jest.config.js",
+        "jestConfig": "libs/angular-app1/home/jest.config.ts",
         "passWithNoTests": true
       }
     },
