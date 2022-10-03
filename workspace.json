@@ -6,6 +6,8 @@
     "app1-profile": "libs/angular-app1/profile",
     "app2": "apps/app2",
     "auth-api-poc": "apps/auth-api-poc",
+    "nextjs-demo": "apps/nextjs-demo",
+    "nextjs-demo-e2e": "apps/nextjs-demo-e2e",
     "react-trpc": "apps/react-trpc",
     "react-trpc-e2e": "apps/react-trpc-e2e",
     "socket-io-poc": "apps/socket-io-poc",

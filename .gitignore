@@ -45,3 +45,6 @@ Thumbs.db
 .npmrc
 
 .angular
+
+# Next.js
+.next
