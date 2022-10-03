@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+
+        [popup] {
+            /* display: none; */
+            /* position: fixed;
+    top: 100px;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    overflow: visible; */
+            transition: transform 2s;
+            transform: translateY(-100%) scale(1.5);
+            color: red;
+            box-shadow: var(--shadow-4);
+        }
+
+
+
+
+        [popup]::backdrop {
+            background: hsl(0 0% 10% / 0.5);
+        }
+
+        #test1{
+            transition: transform 2s;
+    box-shadow: var(--shadow-5);
+    transform: translateY(100vh)
+        }
+    </style>
+    <div id="test1">lore1111</div>
+    <div id="my-first-pop-up" popup>Pop-up content!
+        <button popuphidetarget="my-first-pop-up" class="button ripple">Close</button>
+    </div>
+    <button class="button ripple" popuptoggletarget="my-first-pop-up">Toggle Pop-up</button>
+</body>
+
+</html>

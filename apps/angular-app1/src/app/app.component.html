@@ -81,3 +81,26 @@
 <div class="margin-top-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam numquam illo itaque quam ipsa commodi optio soluta similique iure unde laboriosam non quod, ea, inventore sequi ducimus ratione vel odit sunt autem excepturi provident quaerat libero neque. Reiciendis, accusamus fugiat.</div>
 
 </div>
+
+<div class="example-list">
+  <div class="example-box" cdkDragLockAxis="x"  *ngFor="let movie of movies" cdkDragBoundary=".example-list" cdkDrag>{{movie}}</div>
+</div>
+
+<label class="example-listbox-label" id="example-shirt-size-label">
+  Shirt Size
+</label>
+
+<ul cdkListbox
+    cdkListboxOrientation="horizontal"
+    aria-labelledby="example-shirt-size-label"
+    class="example-listbox">
+    <button class="example-cdkDrag" draggable="true"  #btn1>test1</button>
+    <!-- <button class="example-cdkDrag2" cdkDrag cdkDragLockAxis="x" (cdkDragMoved)="onCdkDragDrop('cdkDragMoved')" (cdkDragDropped)="onCdkDragDrop($event)">test2</button> -->
+  <li *ngFor="let size of sizes"
+      [cdkOption]="size"
+      (dragover)="ondragover($event)"
+      (drop)="liDrop($event)"
+      class="example-option">
+    {{size}}
+  </li>
+</ul>
