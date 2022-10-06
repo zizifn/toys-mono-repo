@@ -1,0 +1,34 @@
+{
+  "name": "js-lib-build",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/js-lib-build/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/js-lib-build",
+        "main": "libs/js-lib-build/src/index.ts",
+        "tsConfig": "libs/js-lib-build/tsconfig.lib.json",
+        "assets": ["libs/js-lib-build/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/js-lib-build/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/js-lib-build"],
+      "options": {
+        "jestConfig": "libs/js-lib-build/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

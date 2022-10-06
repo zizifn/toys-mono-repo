@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@zizifn-toys/js-lib": ["libs/js-lib/src/index.ts"],
+      "@zizifn-toys/js-lib-build": ["libs/js-lib-build/src/index.ts"],
+      "@zizifn-toys/js-lib-bundler": ["libs/js-lib-bundler/src/index.ts"],
+      "@zizifn-toys/js-lib-publish": ["libs/js-lib-publish/src/index.ts"],
       "@zizifn/app1-home": ["libs/angular-app1/home/src/index.ts"],
       "@zizifn/app1-profile": ["libs/angular-app1/profile/src/index.ts"],
       "@zizifn/trpc-express": ["apps/trpc-express/src/app/trpcRouter.ts"]

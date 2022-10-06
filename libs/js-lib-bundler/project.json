@@ -1,0 +1,34 @@
+{
+  "name": "js-lib-bundler",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/js-lib-bundler/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/js-lib-bundler",
+        "main": "libs/js-lib-bundler/src/index.ts",
+        "tsConfig": "libs/js-lib-bundler/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/js-lib-bundler/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/js-lib-bundler"],
+      "options": {
+        "jestConfig": "libs/js-lib-bundler/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
